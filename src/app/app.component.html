@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="board">
+    <div class="row" *ngFor="let row of board; let i = index">
+      <ng-container *ngFor="let square of row; let sqi = index">
+        <div class="square image-container" [ngClass]="{'bee': square.type === 1, 'bee-queen': square.type === 2, 'wasp': square.type === 3, 'wasp-queen': square.type ===4, 'selected': square.selected }" (click)="selectBee(i, sqi, square)">{{square.type}}</div>
+      </ng-container>
+    </div>
+  </div>
+  <div class="console">
+    <div *ngFor="let message of messages; let i = index">{{i+1 + ") " + message}}</div>
+  </div>
+</div>

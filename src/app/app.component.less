@@ -1,0 +1,46 @@
+.container{
+  display: flex;
+  width: 100%;
+  .board{
+    .row {
+      display: flex;
+      flex-direction: row;
+
+      .square {
+        width: 200px;
+        height: 200px;
+        border: 1px solid;
+
+        &.bee {
+          background: url("../assets/images/bee.jpg");
+        }
+
+        &.bee-queen {
+          background: url("../assets/images/bee-queen.PNG");
+        }
+
+        &.wasp {
+          background: url("../assets/images/wasp.png");
+        }
+
+        &.wasp-queen {
+          background: url("../assets/images/wasp-queen.png");
+        }
+
+        &.image-container {
+          background-size: 200px 200px;
+        }
+
+        &.selected {
+          border: 1px solid red;
+        }
+      }
+    }
+  }
+
+  .console{
+    padding: 10px;
+    width: 100%;
+    border: 1px solid;
+  }
+}
